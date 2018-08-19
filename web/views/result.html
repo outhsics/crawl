@@ -1,0 +1,15 @@
+<% include header.html%>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <ul class="list-group">
+                <%
+                  articles.forEach(function(item){ %>
+                    <li class="list-group-item">
+                        <%=item._source.title%>
+                    </li>
+                    <% })
+                %>
+            </ul>
+        </div>
+    </div>
+    <% include footer.html%>

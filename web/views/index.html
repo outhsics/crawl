@@ -1,0 +1,33 @@
+<% include header.html%>
+    <div class="row">
+        <div class="col-md-2">
+            <ul class="list-group">
+                <%
+                       tags.forEach(function(tag){%>
+                    <li class="list-group-item text-center">
+                        <a href="/?tagId=<%=tag.id%>">
+                            <img src="<%=tag.image%>" style="width:25px;height:25px;" />
+                            <%=tag.name%>
+                        </a>
+                    </li>
+                    <%});
+                    %>
+
+            </ul>
+        </div>
+        <div class="col-md-10">
+            <ul class="list-group">
+                <%
+                       articles.forEach(function(item){ %>
+                    <li class="list-group-item text-left">
+                        <a href="/detail/<%=item.id%>">
+                            <%=item.title%>
+                        </a>
+                    </li>
+                    <%});
+                    %>
+
+            </ul>
+        </div>
+    </div>
+    <% include footer.html%>
